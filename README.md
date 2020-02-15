@@ -9,3 +9,5 @@
 # 2. CD [KATALOG]
 # 3. . bin/activate
 # 4. pip freeze (pokazuje zainstalowane pipy/frameworki/biblioteki)
+# $ firefox log.html
+# If there is a problem with virualenv DO - virtualens ~/Directory

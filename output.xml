@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20200215 11:37:26.203" generator="Robot 3.1.2 (Python 2.7.17 on linux2)">
+<suite source="/home/tester/Documents/Mariusz/First Robot file.robot" id="s1" name="First Robot file">
+<test id="s1-t1" name="My first test in robot">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Hello, world!</arg>
+</arguments>
+<status status="PASS" endtime="20200215 11:37:26.250" starttime="20200215 11:37:26.250"></status>
+</kw>
+<status status="PASS" endtime="20200215 11:37:26.251" critical="yes" starttime="20200215 11:37:26.246"></status>
+</test>
+<test id="s1-t2" name="My second test in robot">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+</arguments>
+<status status="PASS" endtime="20200215 11:37:26.253" starttime="20200215 11:37:26.252"></status>
+</kw>
+<status status="PASS" endtime="20200215 11:37:26.253" critical="yes" starttime="20200215 11:37:26.251"></status>
+</test>
+<test id="s1-t3" name="My third test in robot">
+<kw name="Print out">
+<arguments>
+<arg>${MESSAGE}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${print}</arg>
+</arguments>
+<status status="PASS" endtime="20200215 11:37:26.258" starttime="20200215 11:37:26.256"></status>
+</kw>
+<status status="PASS" endtime="20200215 11:37:26.258" starttime="20200215 11:37:26.255"></status>
+</kw>
+<status status="PASS" endtime="20200215 11:37:26.258" critical="yes" starttime="20200215 11:37:26.254"></status>
+</test>
+<status status="PASS" endtime="20200215 11:37:26.261" starttime="20200215 11:37:26.205"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="3">Critical Tests</stat>
+<stat fail="0" pass="3">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="First Robot file" pass="3">First Robot file</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
