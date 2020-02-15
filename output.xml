@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20200215 11:37:26.203" generator="Robot 3.1.2 (Python 2.7.17 on linux2)">
+<robot rpa="false" generated="20200215 12:40:30.985" generator="Robot 3.1.2 (Python 2.7.17 on linux2)">
 <suite source="/home/tester/Documents/Mariusz/First Robot file.robot" id="s1" name="First Robot file">
 <test id="s1-t1" name="My first test in robot">
 <kw name="Log To Console" library="BuiltIn">
@@ -7,9 +7,9 @@
 <arguments>
 <arg>Hello, world!</arg>
 </arguments>
-<status status="PASS" endtime="20200215 11:37:26.250" starttime="20200215 11:37:26.250"></status>
+<status status="PASS" endtime="20200215 12:40:31.015" starttime="20200215 12:40:31.014"></status>
 </kw>
-<status status="PASS" endtime="20200215 11:37:26.251" critical="yes" starttime="20200215 11:37:26.246"></status>
+<status status="PASS" endtime="20200215 12:40:31.015" critical="yes" starttime="20200215 12:40:31.013"></status>
 </test>
 <test id="s1-t2" name="My second test in robot">
 <kw name="Log To Console" library="BuiltIn">
@@ -17,9 +17,9 @@
 <arguments>
 <arg>${MESSAGE}</arg>
 </arguments>
-<status status="PASS" endtime="20200215 11:37:26.253" starttime="20200215 11:37:26.252"></status>
+<status status="PASS" endtime="20200215 12:40:31.016" starttime="20200215 12:40:31.016"></status>
 </kw>
-<status status="PASS" endtime="20200215 11:37:26.253" critical="yes" starttime="20200215 11:37:26.251"></status>
+<status status="PASS" endtime="20200215 12:40:31.017" critical="yes" starttime="20200215 12:40:31.015"></status>
 </test>
 <test id="s1-t3" name="My third test in robot">
 <kw name="Print out">
@@ -31,23 +31,57 @@
 <arguments>
 <arg>${print}</arg>
 </arguments>
-<status status="PASS" endtime="20200215 11:37:26.258" starttime="20200215 11:37:26.256"></status>
+<status status="PASS" endtime="20200215 12:40:31.018" starttime="20200215 12:40:31.018"></status>
 </kw>
-<status status="PASS" endtime="20200215 11:37:26.258" starttime="20200215 11:37:26.255"></status>
+<status status="PASS" endtime="20200215 12:40:31.018" starttime="20200215 12:40:31.017"></status>
 </kw>
-<status status="PASS" endtime="20200215 11:37:26.258" critical="yes" starttime="20200215 11:37:26.254"></status>
+<status status="PASS" endtime="20200215 12:40:31.019" critical="yes" starttime="20200215 12:40:31.017"></status>
 </test>
-<status status="PASS" endtime="20200215 11:37:26.261" starttime="20200215 11:37:26.205"></status>
+<test id="s1-t4" name="My fourth test in robot">
+<kw name="Ok Return" library="Keywords in python">
+<assign>
+<var>${Ok_function}</var>
+</assign>
+<msg timestamp="20200215 12:40:31.020" level="INFO">${Ok_function} = Ok</msg>
+<status status="PASS" endtime="20200215 12:40:31.020" starttime="20200215 12:40:31.019"></status>
+</kw>
+<kw name="Print out">
+<arguments>
+<arg>${Ok_function}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${print}</arg>
+</arguments>
+<status status="PASS" endtime="20200215 12:40:31.021" starttime="20200215 12:40:31.021"></status>
+</kw>
+<status status="PASS" endtime="20200215 12:40:31.021" starttime="20200215 12:40:31.020"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Ok_function}</arg>
+<arg>Ok</arg>
+</arguments>
+<msg timestamp="20200215 12:40:31.022" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20200215 12:40:31.022" starttime="20200215 12:40:31.021"></status>
+</kw>
+<status status="PASS" endtime="20200215 12:40:31.022" critical="yes" starttime="20200215 12:40:31.019"></status>
+</test>
+<status status="PASS" endtime="20200215 12:40:31.022" starttime="20200215 12:40:30.986"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="0" pass="3">Critical Tests</stat>
-<stat fail="0" pass="3">All Tests</stat>
+<stat fail="0" pass="4">Critical Tests</stat>
+<stat fail="0" pass="4">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="0" id="s1" name="First Robot file" pass="3">First Robot file</stat>
+<stat fail="0" id="s1" name="First Robot file" pass="4">First Robot file</stat>
 </suite>
 </statistics>
 <errors>

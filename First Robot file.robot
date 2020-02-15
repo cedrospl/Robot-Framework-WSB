@@ -1,3 +1,6 @@
+*** Settings ***
+Library   Keywords in python.py
+
 *** Variables ***
 ${MESSAGE}   Hello, world!
 
@@ -10,6 +13,12 @@ My second test in robot
 
 My third test in robot
     Print out   ${MESSAGE}
+
+My fourth test in robot
+    ${Ok_function}=   Ok_return
+    Print out   ${Ok_function}
+    BuiltIn.Should Be Equal    ${Ok_function}   Ok
+
 
 *** Keywords ***
 Print out
