@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20200215 12:40:30.985" generator="Robot 3.1.2 (Python 2.7.17 on linux2)">
+<robot rpa="false" generated="20200215 14:06:27.017" generator="Robot 3.1.2 (Python 2.7.17 on linux2)">
 <suite source="/home/tester/Documents/Mariusz/First Robot file.robot" id="s1" name="First Robot file">
 <test id="s1-t1" name="My first test in robot">
 <kw name="Log To Console" library="BuiltIn">
@@ -7,9 +7,9 @@
 <arguments>
 <arg>Hello, world!</arg>
 </arguments>
-<status status="PASS" endtime="20200215 12:40:31.015" starttime="20200215 12:40:31.014"></status>
+<status status="PASS" endtime="20200215 14:06:27.128" starttime="20200215 14:06:27.127"></status>
 </kw>
-<status status="PASS" endtime="20200215 12:40:31.015" critical="yes" starttime="20200215 12:40:31.013"></status>
+<status status="PASS" endtime="20200215 14:06:27.128" critical="yes" starttime="20200215 14:06:27.127"></status>
 </test>
 <test id="s1-t2" name="My second test in robot">
 <kw name="Log To Console" library="BuiltIn">
@@ -17,9 +17,9 @@
 <arguments>
 <arg>${MESSAGE}</arg>
 </arguments>
-<status status="PASS" endtime="20200215 12:40:31.016" starttime="20200215 12:40:31.016"></status>
+<status status="PASS" endtime="20200215 14:06:27.129" starttime="20200215 14:06:27.129"></status>
 </kw>
-<status status="PASS" endtime="20200215 12:40:31.017" critical="yes" starttime="20200215 12:40:31.015"></status>
+<status status="PASS" endtime="20200215 14:06:27.130" critical="yes" starttime="20200215 14:06:27.128"></status>
 </test>
 <test id="s1-t3" name="My third test in robot">
 <kw name="Print out">
@@ -31,19 +31,19 @@
 <arguments>
 <arg>${print}</arg>
 </arguments>
-<status status="PASS" endtime="20200215 12:40:31.018" starttime="20200215 12:40:31.018"></status>
+<status status="PASS" endtime="20200215 14:06:27.131" starttime="20200215 14:06:27.131"></status>
 </kw>
-<status status="PASS" endtime="20200215 12:40:31.018" starttime="20200215 12:40:31.017"></status>
+<status status="PASS" endtime="20200215 14:06:27.132" starttime="20200215 14:06:27.131"></status>
 </kw>
-<status status="PASS" endtime="20200215 12:40:31.019" critical="yes" starttime="20200215 12:40:31.017"></status>
+<status status="PASS" endtime="20200215 14:06:27.132" critical="yes" starttime="20200215 14:06:27.130"></status>
 </test>
 <test id="s1-t4" name="My fourth test in robot">
 <kw name="Ok Return" library="Keywords in python">
 <assign>
 <var>${Ok_function}</var>
 </assign>
-<msg timestamp="20200215 12:40:31.020" level="INFO">${Ok_function} = Ok</msg>
-<status status="PASS" endtime="20200215 12:40:31.020" starttime="20200215 12:40:31.019"></status>
+<msg timestamp="20200215 14:06:27.133" level="INFO">${Ok_function} = Ok</msg>
+<status status="PASS" endtime="20200215 14:06:27.133" starttime="20200215 14:06:27.133"></status>
 </kw>
 <kw name="Print out">
 <arguments>
@@ -54,9 +54,9 @@
 <arguments>
 <arg>${print}</arg>
 </arguments>
-<status status="PASS" endtime="20200215 12:40:31.021" starttime="20200215 12:40:31.021"></status>
+<status status="PASS" endtime="20200215 14:06:27.134" starttime="20200215 14:06:27.134"></status>
 </kw>
-<status status="PASS" endtime="20200215 12:40:31.021" starttime="20200215 12:40:31.020"></status>
+<status status="PASS" endtime="20200215 14:06:27.135" starttime="20200215 14:06:27.133"></status>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
@@ -64,24 +64,103 @@
 <arg>${Ok_function}</arg>
 <arg>Ok</arg>
 </arguments>
-<msg timestamp="20200215 12:40:31.022" level="INFO">Argument types are:
+<msg timestamp="20200215 14:06:27.135" level="INFO">Argument types are:
 &lt;type 'str'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" endtime="20200215 12:40:31.022" starttime="20200215 12:40:31.021"></status>
+<status status="PASS" endtime="20200215 14:06:27.135" starttime="20200215 14:06:27.135"></status>
 </kw>
-<status status="PASS" endtime="20200215 12:40:31.022" critical="yes" starttime="20200215 12:40:31.019"></status>
+<status status="PASS" endtime="20200215 14:06:27.136" critical="yes" starttime="20200215 14:06:27.132"></status>
 </test>
-<status status="PASS" endtime="20200215 12:40:31.022" starttime="20200215 12:40:30.986"></status>
+<test id="s1-t5" name="SSH test after connection to localhost">
+<kw name="Connection to localhost">
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<arguments>
+<arg>${REMOTEHOST}</arg>
+</arguments>
+<status status="PASS" endtime="20200215 14:06:27.141" starttime="20200215 14:06:27.140"></status>
+</kw>
+<status status="PASS" endtime="20200215 14:06:27.141" starttime="20200215 14:06:27.139"></status>
+</kw>
+<kw name="Logging in to localhost">
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<arguments>
+<arg>${REMOTEUSERNAME}</arg>
+<arg>${REMOTEPASSWORD}</arg>
+</arguments>
+<msg timestamp="20200215 14:06:27.143" level="INFO">Logging into 'localhost:22' as 'tester'.</msg>
+<msg timestamp="20200215 14:06:29.169" level="INFO">Read output: Welcome to Ubuntu 18.04.1 LTS (GNU/Linux 4.15.0-76-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Multipass 1.0 is out! Get Ubuntu VMs on demand on your Linux, Windows or
+   Mac. Supports cloud-init for fast, local, cloud devops simulation.
+
+     https://multipass.run/
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+
+285 packages can be updated.
+0 updates are security updates.
+
+----------------------------------------------------------------
+  Ubuntu 18.04.1 LTS                          built 2018-10-04
+----------------------------------------------------------------
+Last login: Sat Feb 15 14:06:08 2020 from 127.0.0.1
+tester@tester-m:~$</msg>
+<status status="PASS" endtime="20200215 14:06:29.170" starttime="20200215 14:06:27.142"></status>
+</kw>
+<status status="PASS" endtime="20200215 14:06:29.170" starttime="20200215 14:06:27.141"></status>
+</kw>
+<kw name="SSH test and assertion via localhost">
+<kw name="Execute Command" library="SSHLibrary">
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<arguments>
+<arg>uname -a</arg>
+</arguments>
+<assign>
+<var>${check}</var>
+</assign>
+<msg timestamp="20200215 14:06:29.173" level="INFO">Executing command 'uname -a'.</msg>
+<msg timestamp="20200215 14:06:29.189" level="INFO">Command exited with return code 0.</msg>
+<msg timestamp="20200215 14:06:29.190" level="INFO">${check} = Linux tester-m 4.15.0-76-generic #86-Ubuntu SMP Fri Jan 17 17:24:28 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux</msg>
+<status status="PASS" endtime="20200215 14:06:29.190" starttime="20200215 14:06:29.172"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${check}</arg>
+<arg>Linux</arg>
+</arguments>
+<status status="PASS" endtime="20200215 14:06:29.191" starttime="20200215 14:06:29.190"></status>
+</kw>
+<status status="PASS" endtime="20200215 14:06:29.191" starttime="20200215 14:06:29.171"></status>
+</kw>
+<kw name="Closing connection with localhost">
+<kw name="Close All Connections" library="SSHLibrary">
+<doc>Closes all open connections.</doc>
+<status status="PASS" endtime="20200215 14:06:29.259" starttime="20200215 14:06:29.192"></status>
+</kw>
+<status status="PASS" endtime="20200215 14:06:29.259" starttime="20200215 14:06:29.191"></status>
+</kw>
+<status status="PASS" endtime="20200215 14:06:29.260" critical="yes" starttime="20200215 14:06:27.136"></status>
+</test>
+<status status="PASS" endtime="20200215 14:06:29.261" starttime="20200215 14:06:27.018"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="0" pass="4">Critical Tests</stat>
-<stat fail="0" pass="4">All Tests</stat>
+<stat fail="0" pass="5">Critical Tests</stat>
+<stat fail="0" pass="5">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="0" id="s1" name="First Robot file" pass="4">First Robot file</stat>
+<stat fail="0" id="s1" name="First Robot file" pass="5">First Robot file</stat>
 </suite>
 </statistics>
 <errors>

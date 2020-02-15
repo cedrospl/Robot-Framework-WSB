@@ -11,3 +11,6 @@
 # 4. pip freeze (pokazuje zainstalowane pipy/frameworki/biblioteki)
 # $ firefox log.html
 # If there is a problem with virualenv DO - virtualens ~/Directory
+# ssh tester@localhost
+# uname -a
+#
