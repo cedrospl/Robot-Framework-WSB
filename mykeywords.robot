@@ -29,8 +29,8 @@ logged
 Enter Credentials
 	[Arguments]  ${user}  ${pass}
 	Log to console  uzylem cred ${user} ${pass}
-    Input Text   id:login   ${B-login}   clear=True
-    Input Text   id:password   ${B-pass}   clear=True
+    Input Text   id:login   ${user}   clear=True
+    Input Text   id:password   ${pass}   clear=True
     Click Button   id:btnSubmit
 
 webpage check
