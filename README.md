@@ -13,4 +13,7 @@
 # If there is a problem with virualenv DO - virtualens ~/Directory
 # ssh tester@localhost
 # uname -a
-#
+# 16.02.2020
+# sudo su install sshpass
+# sudo su install firefox-geckodriver
+# python -m nsm all -> mykeywords.robot

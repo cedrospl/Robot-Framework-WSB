@@ -46,7 +46,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/tester/Documents/Mariusz"
+VIRTUAL_ENV="/home/tester/Documents/Mariusz/Robot-Framework-WSB"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
