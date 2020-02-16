@@ -17,3 +17,7 @@
 # sudo su install sshpass
 # sudo su install firefox-geckodriver
 # python -m nsm all -> mykeywords.robot
+# -v  x:123    Nadpisywanie jakiejs zmiennej (Variables)
+# -t nazwa_testu    Odpalanie okreslonego testu z konsoli
+# atom update for robot - https://atom.io/packages/autocomplete-robot-framework
+# ansible - biblioteki do praktycznie wszystkich technologii, kwestia szukania, zainstaloawania biblioteki i kodowania ;-)

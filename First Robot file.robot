@@ -2,6 +2,8 @@
 Library   Keywords in python.py
 Library   SSHLibrary
 Library   SeleniumLibrary
+Library   Impansible
+Library   Collections
 
 *** Variables ***
 ${MESSAGE}   Hello, world!
@@ -11,7 +13,8 @@ ${REMOTEPASSWORD}   tester
 ${Browser-url}   https://profil.wp.pl/login.html?zaloguj=poczta
 ${B-login}   testerwsb_t1
 ${B-pass}   adam1234
-
+${Browser}   HeadlessFirefox
+${Ansible_password}   tester
 
 *** Test Cases ***
 My first test in robot
@@ -50,6 +53,22 @@ Browser test 01
 
     Close browser
 
+Module test - self Ubuntu check
+    ${localhostCheck}=   Setup   localhost
+    ${ansible_facts}=   Get From Dictionary   ${localhostCheck}   ansible_facts
+    ${ansible_distribution}=   Get From Dictionary   ${ansible_facts}   ansible_distribution
+    Log to console   ${ansible_distribution}
+    BuiltIn.Should Be Equal   ${ansible distribution}   Ubuntu
+
+Module test - number of cores
+    Connection to localhost
+
+    Logging in to localhost
+
+    SSH test for number of cores and assertion via localhost
+
+    Closing connection with localhost
+
 *** Keywords ***
 Print out
     [Arguments]   ${print}
@@ -69,7 +88,7 @@ Closing connection with localhost
     Close All Connections
 
 Open url poczta.wp.pl
-    Open Browser   ${Browser-url}   Firefox
+    Open Browser   ${Browser-url}   ${Browser}
 
 Input login and password
     Input Text   id:login   ${B-login}   clear=True
@@ -87,4 +106,10 @@ Logout from e-mail
 
 Close browser
     Close All Browsers
+
+SSH test for number of cores and assertion via localhost
+    Log to console   
+    ${numberOfCores}   Execute command  grep -c ^processor /proc/cpuinfo
+    Log to console   ${numberOfCores}
+    BuiltIn.Should be Equal    ${numberOfCores}   2
 
